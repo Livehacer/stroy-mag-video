@@ -18,10 +18,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g remotion
 
       - name: Render Video
-        run: npx remotion render src/index.tsx out/video.mp4
+        run: npx remotion render src/index.tsx out/video.mp4 || npx remotion render template/src/index.ts out/video.mp4
 
       - name: Upload Video Artifact
         uses: actions/upload-artifact@v4
