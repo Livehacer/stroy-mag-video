@@ -30,10 +30,10 @@ export const AIFL_TOTAL = 1085;
 // title-card copy: space-separated words, `*word*` = amber italic accent. Single
 // source for the render below and for the workbench manifest (workbench.ts).
 export const TITLE_CARDS = {
-  card1: { text: 'All your team’s research, *one* place to go.' },
-  card2: { text: 'Paper *Radar,* tailored for your morning reading.', sub: 'of 31 fetched today', subDigits: '5' },
-  cardWbr: { text: 'Every project, *linked* to your weekly report.' },
-  card3: { text: 'The whole team, on the *same* page.' },
+  card1: { text: 'Широкий выбор *всего* для стройки.' },
+  card2: { text: '*Низкие цены* и высокое качество.', sub: 'гарантия от фирм', subDigits: '1' },
+  cardWbr: { text: 'Опыт работы *более 5 лет*.' },
+  card3: { text: 'Быстрая доставка и *удобная* оплата.' },
 } as const;
 
 export const parseWords = (text: string): { text: string; accent?: boolean }[] =>
@@ -55,12 +55,12 @@ export const sfxDuration = (s: { from: number; src: string }) =>
 
 // bottom-strip narration over the live shots (absolute frames; outro stays clean)
 export const CAPTIONS = [
-  { from: 90, duration: 40, text: 'TEN LIVE PROJECTS · FOUR RESEARCHERS' },
+  { from: 90, duration: 40, text: 'СТРОЙМАГ ЗВЕРЕВО · ЛУЧШИЕ ЦЕНЫ' },
   // (the hero-card hover annotation lives inside SceneOpen as a 3D floating note)
-  { from: 318, duration: 44, text: 'NEW WORK LANDS ALL WEEK' },
-  { from: 395, duration: 55, text: 'SEARCH · FILTER · OPEN' },
-  { from: 477, duration: 68, text: 'EVERY QUESTION, TRACKED TO ITS EXPERIMENTS' },
-  { from: 633, duration: 72, text: 'THE DAILY PAPER RADAR' },
+  { from: 318, duration: 44, text: 'ВСЕ ФИРМЫ-ИЗГОТОВИТЕЛИ' },
+  { from: 395, duration: 55, text: 'КОНСУЛЬТАЦИИ СПЕЦИАЛИСТОВ' },
+  { from: 477, duration: 68, text: 'ЭКОНОМИЯ ВРЕМЕНИ И СРЕДСТВ' },
+  { from: 633, duration: 72, text: 'ДАКАР У НАЗИМА' },
   { from: 789, duration: 78, text: 'FOUR VOICES, ONE WEEKLY BRIEF' },
 ] as const;
 
